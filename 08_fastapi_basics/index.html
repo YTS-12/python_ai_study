@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>FastAPI fetch 연결 실습</title>
+</head>
+<body>
+    <h1>상품 정보 조회</h1>
+    <p>
+        이 페이지는 <code>main2.py</code>의
+        <code>/items/{item_id}</code> API를 브라우저에서 호출하는 연습 파일입니다.
+    </p>
+    <button onclick="getItemInfo()">12번 상품 정보 가져오기</button>
+    <pre id="item-info"></pre>
+
+    <script>
+        async function getItemInfo() {
+            // main2.py를 `uvicorn main2:app --reload`로 실행한 뒤 버튼을 누른다.
+            const response = await fetch("http://127.0.0.1:8000/items/12");
+            const data = await response.json();
+
+            document.getElementById("item-info").innerText =
+                `상품명: ${data.name}\n상품 ID: ${data.item_id}`;
+        }
+    </script>
+</body>
+</html>
