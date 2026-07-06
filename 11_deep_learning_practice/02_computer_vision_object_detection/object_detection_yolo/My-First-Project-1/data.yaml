@@ -1,0 +1,22 @@
+names:
+- '0'
+- '1'
+- '2'
+- '3'
+- '4'
+- '5'
+- '6'
+- '7'
+- '8'
+- '9'
+- objects
+nc: 11
+roboflow:
+  license: MIT
+  project: my-first-project-afory
+  url: https://universe.roboflow.com/s-workspace-wf5aw/my-first-project-afory/dataset/1
+  version: 1
+  workspace: s-workspace-wf5aw
+test: ../test/images
+train: ../train/images
+val: ../valid/images
