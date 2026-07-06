@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# 환경변수 / 비밀키
+.env
+.env.local
+.env.*.local
+*.secret
+.streamlit/secrets.toml
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 모델/캐시 산출물
+*.pkl
+*.pt
+*.pth
+*.safetensors
+catboost_info/
+
+# 로그
+*.log
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
